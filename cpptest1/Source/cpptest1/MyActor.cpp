@@ -50,7 +50,8 @@ void AMyActor::move()
         path.Add(newlocation);
 
 		UE_LOG(LogTemp, Warning, TEXT("New location: X = %f, Y = %f"), newlocation.X, newlocation.Y);
-		
+		UE_LOG(LogTemp, Warning, TEXT("Current Step Distance: %f"), difference(path[i], path[i + 1]));
+
 		totaldistance += difference(path[i], path[i + 1]);
 
 		TriggerEventWithProbability(50);
